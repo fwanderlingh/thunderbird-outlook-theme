@@ -1,5 +1,6 @@
 /* FLUENTBIRD - A FLUENT DESIGN THEME FOR THUNDERBIRD  */
-/*     Created by Danny King - www.dannyking.co.uk     */
+/*         Orignally Created by Danny King 	           */
+/*               - fwanderlingh MOD -                  */
 /*                   v1.1.1 RELEASE                    */
 /*        DISTRIBUTED UNDER THE MIT LICENSE            */
 
@@ -104,10 +105,16 @@
    SPACES TOOLBAR & SIDEBAR ICONS
    ===================================================== */
 
-#spacesToolbar {
+/*#spacesToolbar {
 	background-color: #fff0 !important;
 	background-image: none !important;
 	border: 0px !important;
+}*/
+/* Solid Outlook-style left navigation bar */
+#spacesToolbar {
+    background-color: #f3f3f3 !important;
+    background-image: none !important;
+    opacity: 1 !important;
 }
 
 /* Hide default icon images; replaced via background-image below */
@@ -654,7 +661,13 @@ tree-view[data-show-grouped-by-sort="true"] .card-layout.children *:hover {
 
 .message-header-view-button .toolbarbutton-text {
 	padding-inline-start: 6px !important;
-	padding: 8px !important;
+	/*padding: 8px !important;*/
+}
+
+.message-header-view-button .toolbarbutton-icon,
+.message-header-view-button .toolbarbutton-text {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .icons-beside-text,
@@ -1826,9 +1839,9 @@ global-search-bar {
 	transform: translateY(-50%) !important;
 	inline-size: 30px !important;
 	block-size: 30px !important;
-	border: 2px solid color-mix(in srgb, white 72%, transparent) !important;
+	/*border: 2px solid color-mix(in srgb, white 72%, transparent) !important;*/
 	border-radius: 50% !important;
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18) !important;
+	/*box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18) !important;*/
 }
 
 .tb-trash-btn {
@@ -1985,3 +1998,98 @@ global-search-bar {
 		transition: none !important;
 	}
 }
+
+@media (prefers-color-scheme: dark) {
+    #spacesToolbar {
+        background-color: #202020 !important;
+    }
+}
+
+/* =====================================================
+   FLAT MAIL ROWS
+   - separator line only
+   - read sender normal weight
+   ===================================================== */
+
+/* Normal message cards: no box, only bottom separator */
+#threadTree .card-layout:not([data-properties~="dummy"]) .card-container {
+    border: none !important;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.22) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Don't restore the box on hover */
+#threadTree .card-layout:not([data-properties~="dummy"]):hover .card-container {
+    border: none !important;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.28) !important;
+    box-shadow: none !important;
+}
+
+/* Read messages: sender not bold */
+#threadTree .card-layout:not([data-properties~="unread"]) .sender {
+    font-weight: 400 !important;
+}
+
+/* Unread messages: keep sender bold */
+#threadTree .card-layout[data-properties~="unread"] .sender {
+    font-weight: 700 !important;
+}
+
+/* Outlook-style reading pane spacing */
+#messageHeader {
+    padding: 16px 20px 10px !important;
+}
+
+#messagePane {
+    padding: 0 20px 20px !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important;
+}
+
+/* More compact Day / Week calendar */
+
+.calendar-time-bar,
+.calendar-day-column {
+    --hour-height: 36px !important;
+}
+
+/* Reduce event text/padding slightly */
+.calendar-event-box {
+    padding-block: 1px !important;
+    font-size: 0.88rem !important;
+}
+
+/* Put attachments between the message header and message body */
+
+/* Message header */
+#singleMessage {
+    order: 1 !important;
+}
+
+/* Attachments */
+#attachmentView {
+    order: 2 !important;
+}
+
+/* Security / remote-content warnings */
+#mail-notification-top {
+    order: 3 !important;
+}
+
+/* Actual message body */
+#messagepane {
+    order: 4 !important;
+    flex: 1 1 auto !important;
+}
+
+/* Optional: removes the old splitter associated with the bottom position */
+#attachment-splitter {
+    display: none !important;
+}
+
+#attachmentView,
+#attachmentBar {
+    background-color: #fff2cc !important;
+}
+
