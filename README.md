@@ -2,9 +2,8 @@
 
 An Outlook-inspired visual overhaul for Thunderbird with modern message cards, sender avatars, quick account switching, a one-click delete action, and a customisable wallpaper.
 
-![FluentBird Polished account switcher and message list](screenshots/Thunderbird.png)
+![FluentBird Polished account switcher and message list](screenshots/Anonymized_Thunderbird.png)
 
-![FluentBird Polished reading pane](screenshots/ThunderbirdMessage.png)
 
 ## What's included
 
