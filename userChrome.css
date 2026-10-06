@@ -3,6 +3,7 @@
 /*               - fwanderlingh MOD -                  */
 /*                   v1.1.1 RELEASE                    */
 /*        DISTRIBUTED UNDER THE MIT LICENSE            */
+
 /* =====================================================
    CUSTOM OVERRIDES
    If you want to make your own tweaks, you can 
@@ -19,9 +20,8 @@
 
 /* Rounded top-left clip on main content area */
 #messengerBody {
-	opacity: 90%;
-	/*border-top-left-radius: 12px !important;*/
-	overflow: hidden !important;
+
+	
 }
 
 /* Hide hamburger menu and keyboard shortcut container */
@@ -203,6 +203,7 @@
 /* Account-level row: larger text, no icon */
 #folderTree li[data-server-type] > .container > .name {
 	font-weight: normal !important;
+
 	font-size: 1.18rem !important;
 }
 
@@ -612,6 +613,7 @@ tree-view[data-show-grouped-by-sort="true"] .card-layout.children *:hover {
 
 
 /* =====================================================
+
    TOOLBAR ACTION BUTTONS (reply, forward, trash, etc.)
    ===================================================== */
 
@@ -1285,6 +1287,7 @@ global-search-bar {
 
 .unread > .container > .unread-count {
 	background-color: color-mix(in srgb, var(--fb-accent) 13%, transparent) !important;
+
 	color: var(--fb-accent-strong) !important;
 	font-weight: 650 !important;
 }
@@ -1949,7 +1952,7 @@ global-search-bar {
 
 #messengerBody {
 	opacity: 1 !important;
-	border-top-left-radius: 10px !important;
+	overflow: hidden !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1989,6 +1992,7 @@ global-search-bar {
 
 	.sender-avatar {
 		inline-size: 28px !important;
+
 		block-size: 28px !important;
 	}
 }
@@ -2095,4 +2099,6 @@ global-search-bar {
 #attachmentBar {
     background-color: #fff2cc !important;
 }
+
+
 
