@@ -1,4 +1,4 @@
-# FluentBird Polished for Thunderbird
+# FluentBird Polished (MOD) for Thunderbird
 
 An Outlook-inspired visual overhaul for Thunderbird with modern message cards, sender avatars, quick account switching, a one-click delete action, and a customisable wallpaper.
 
@@ -103,10 +103,6 @@ The original release remains available as [version 1.0](../../releases/tag/v1.0)
 - Windows 11 Mica does not work on other operating systems.
 - Compose, Settings, Calendar, Tasks, Chat, and some Shadow DOM surfaces have more limited theme coverage.
 - The account switcher uses Thunderbird's English folder name `All Mail` and falls back to Inbox when it cannot find it.
-
-## Changelog
-
-See [CHANGELOG.md](CHANGELOG.md) for the main differences between the original release and FluentBird Polished.
 
 ## Credits and licence
 
